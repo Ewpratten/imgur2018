@@ -1,17 +1,23 @@
 [package]
-name = "<crate_name>"
+name = "imgur2018"
 version = "0.1.0"
 authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2018"
-description = "<description>"
-documentation = "https://docs.rs/<crate_name>"
+description = "An Imgur upload client for async Rust"
+documentation = "https://docs.rs/imgur2018"
 readme = "README.md"
-homepage = "https://github.com/ewpratten/<repo_name>"
-repository = "https://github.com/ewpratten/<repo_name>"
+homepage = "https://github.com/ewpratten/imgur2018"
+repository = "https://github.com/ewpratten/imgur2018"
 license = "GPL-3.0"
-keywords = []
+keywords = ["imgur"]
 categories = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+url = "2.2"
+thiserror = "1"
+serde_json = "1"
+
+[dev-dependencies]
+tokio-test = "0.4"
