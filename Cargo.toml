@@ -1,6 +1,6 @@
 [package]
 name = "imgur2018"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2018"
 description = "An Imgur upload client for async Rust"
@@ -14,7 +14,7 @@ categories = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-reqwest = { version = "0.11", features = ["json"] }
+reqwest = { version = "0.11.10", default-features=false, features = ["json", "rustls-tls"] }
 url = "2.2"
 thiserror = "1"
 serde_json = "1"
